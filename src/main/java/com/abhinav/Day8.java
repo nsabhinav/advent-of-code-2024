@@ -88,22 +88,6 @@ public class Day8 {
           }
 
           {
-            int x = first[0] - xDiff;
-            int y = first[1] - yDiff;
-
-            while (isValid(map, x, y)) {
-              String antiNodeCoordinate = x + "," + y;
-              if (!visited.contains(antiNodeCoordinate)) {
-                sum++;
-                visited.add(antiNodeCoordinate);
-              }
-
-              x -= xDiff;
-              y -= yDiff;
-            }
-          }
-
-          {
             int x = second[0] - xDiff;
             int y = second[1] - yDiff;
             while (isValid(map, x, y)) {
@@ -119,17 +103,18 @@ public class Day8 {
           }
 
           {
-            int x = second[0] + xDiff;
-            int y = second[1] + yDiff;
-            while (isValid(map, x, y)) {
-              String antiNodeCoordinate = x + "," + y;
-              if (!visited.contains(antiNodeCoordinate)) {
-                sum++;
-                visited.add(antiNodeCoordinate);
-              }
+            String antiNodeCoordinate = first[0] + "," + first[1];
+            if (!visited.contains(antiNodeCoordinate)) {
+              sum++;
+              visited.add(antiNodeCoordinate);
+            }
+          }
 
-              x += xDiff;
-              y += yDiff;
+          {
+            String antiNodeCoordinate = second[0] + "," + second[1];
+            if (!visited.contains(antiNodeCoordinate)) {
+              sum++;
+              visited.add(antiNodeCoordinate);
             }
           }
         }
