@@ -20,7 +20,7 @@ public class Day6 {
   }
 
   private static void readInput(List<List<String>> map) throws IOException {
-    InputStream inputStream = Day2.class.getResourceAsStream("/day_6_input.txt");
+    InputStream inputStream = Day2.class.getResourceAsStream("/day_6/day_6_input.txt");
     InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
     BufferedReader reader = new BufferedReader(streamReader);
     for (String line; (line = reader.readLine()) != null; ) {

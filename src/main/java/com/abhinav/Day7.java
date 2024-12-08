@@ -17,7 +17,7 @@ public class Day7 {
   }
 
   private static void readInput(List<String> equations) throws IOException {
-    InputStream inputStream = Day2.class.getResourceAsStream("/day_7_input.txt");
+    InputStream inputStream = Day2.class.getResourceAsStream("/day_7/day_7_input.txt");
     InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
     BufferedReader reader = new BufferedReader(streamReader);
     for (String line; (line = reader.readLine()) != null; ) {

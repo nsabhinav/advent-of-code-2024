@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Day5 {
 
@@ -21,7 +20,7 @@ public class Day5 {
 
   private static void readInput(Map<Integer, Set<Integer>> rules, List<List<Integer>> updates)
       throws IOException {
-    InputStream inputStream = Day2.class.getResourceAsStream("/day_5_input.txt");
+    InputStream inputStream = Day2.class.getResourceAsStream("/day_5/day_5_input.txt");
     InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
     BufferedReader reader = new BufferedReader(streamReader);
     boolean isRules = true;
